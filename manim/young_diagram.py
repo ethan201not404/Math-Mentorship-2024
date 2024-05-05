@@ -1,11 +1,11 @@
-# Use Python Manim to demenstarte Young diagram P(4) 
-# Ethan Li
-
-
 from manim import *
 
 class YoungDiagram(Scene):
     def construct(self):
+        # Title for the scene
+        title = Text("Young Diagrams for Integer Partition", font_size=24, color=WHITE)
+        title.to_edge(UP, buff=0.5)
+
         # Define partitions of 4
         partitions = [
             [4],
@@ -23,7 +23,6 @@ class YoungDiagram(Scene):
             diagram = VGroup()
             for j, part in enumerate(partition):
                 # Create a square for each part of the partition
-                # Assume each square's side is 0.5 for uniformity
                 row = VGroup(*[Square(side_length=0.5, fill_color=BLUE, fill_opacity=0.5, stroke_color=WHITE) for _ in range(part)])
                 row.arrange(RIGHT, buff=0)  # Arrange squares in a row
                 row.shift(j * DOWN * 0.6)  # Shift each row down
@@ -41,10 +40,12 @@ class YoungDiagram(Scene):
             diagrams.add(diagram)
 
             # Add label below each diagram
-            label = Text(f"Partition: {'+'.join(map(str, partition))}", font_size=16, color='Yellow').next_to(diagram, UP)
+            label = Text(f"Partition: {'+'.join(map(str, partition))}", font_size=16, color='Yellow').next_to(diagram, DOWN)
             labels.add(label)
 
-        # Animate diagrams and labels creation
+        # Animate title, diagrams, and labels creation
+        self.play(Write(title))
+        self.wait(0.5)
         for diagram, label in zip(diagrams, labels):
             self.play(FadeIn(diagram), Write(label))
             self.wait(0.5)
