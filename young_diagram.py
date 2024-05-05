@@ -1,6 +1,7 @@
 # Use Python Manim to demenstarte Young diagram P(4) 
 # Ethan Li
 
+
 from manim import *
 
 class YoungDiagram(Scene):

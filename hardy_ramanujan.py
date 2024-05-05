@@ -1,3 +1,7 @@
+# Use Python Manim to demenstarte the outcomes of the Hardy-Ramanujan’s Asymptotic Expression
+# Ethan Li
+
+
 from manim import *
 import numpy as np
 
