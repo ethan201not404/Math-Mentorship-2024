@@ -3,7 +3,7 @@ from manim import *
 class YoungDiagram(Scene):
     def construct(self):
         # Title for the scene
-        title = Text("Young Diagrams for Integer Partition", font_size=24, color=WHITE)
+        title = Text("Young Diagram for Integer Partition", font_size=24, color=WHITE)
         title.to_edge(UP, buff=0.5)
 
         # Define partitions of 4
