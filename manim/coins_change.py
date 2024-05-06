@@ -13,11 +13,12 @@ class CoinCombination(Scene):
         # Create coin representations and labels
         coins = VGroup()
         values = [1, 5, 10, 25, 50]
-        labels = ["1 cent", "5 cents", "10 cents", "25 cents", "50 cents"]
+        labels = ["1¢", "5¢", "10¢", "25¢", "50¢"]  # Simplified labels for clarity
         for i, (value, label) in enumerate(zip(values, labels)):
             # Coin circle
             coin = Circle(radius=0.5, color=GOLD_E, fill_opacity=0.5)
-            coin_text = Text(label, font_size=24).move_to(coin.get_center())
+            # Adjusting the font size to fit inside the circle and setting the color to yellow
+            coin_text = Text(label, font_size=20, color=YELLOW).move_to(coin.get_center())
             coin_group = VGroup(coin, coin_text).shift(RIGHT * i * 1.5)
 
             # Question mark for each coin type
@@ -38,7 +39,7 @@ class CoinCombination(Scene):
         # Create '+' signs and position them
         plus_signs = VGroup()
         for i in range(len(coins) - 1):
-            plus = Text("+", font_size=36).next_to(coins[i], RIGHT, buff=0.2)
+            plus = Text("+", font_size=36, color=WHITE).next_to(coins[i], RIGHT, buff=0.2)
             plus_signs.add(plus)
 
         # Display '+' signs
@@ -46,8 +47,9 @@ class CoinCombination(Scene):
         self.wait(1)
 
         # '=' sign and total
-        equals_sign = Text("=", font_size=36).next_to(coins[-1], RIGHT, buff=0.2)
-        total_dollar = Text("1 dollar", font_size=36).next_to(equals_sign, RIGHT, buff=0.2)
+        equals_sign = Text("=", font_size=36, color=WHITE).next_to(coins[-1], RIGHT, buff=0.2)
+        # Setting the "1 dollar" text to yellow
+        total_dollar = Text("1 dollar", font_size=36, color=YELLOW).next_to(equals_sign, RIGHT, buff=0.2)
 
         # Display '=' and total
         self.play(Write(equals_sign), Write(total_dollar))
