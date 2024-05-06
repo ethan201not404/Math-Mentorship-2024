@@ -1,3 +1,6 @@
+# Use Python Manim to demenstarte the outcomes of the Young Diagram for Integers Partition
+# Ethan Li
+
 from manim import *
 
 class YoungDiagram(Scene):
