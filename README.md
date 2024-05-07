@@ -38,9 +38,12 @@ During the program, you and your mentor will:
 Mentors will assist mentees in developing their goals by providing knowledge, advice, and resources. At the closing ceremony, mentees will present their research projects to the group.
 
 ## My Reasearch Topic
-My research topic is Integer Partitions. 
+My research topic is Integer Partitions.
+
 I would like to extend huge thanks to my mentor, Claire Zhao, for her guidance and mentorship!
-[View PDF](2024MathMentorshipByEthanLi.pdf)
+
+
+[View PDF](https://github.com/ethan201not404/Math-Mentorship-2024/blob/main/2024MathMentorshipByEthanLi.pdf)
 
 
 [ClosingCeremony](MentoshipClosingCeremony.jpg "ceremony")
