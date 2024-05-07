@@ -26,6 +26,7 @@ The goal of the Math Mentorship Program is to:
 - **Time:** 1:00 PM – 4:00 PM
 - **Location:** University of Toronto (St. George Campus – 40 St. George Street)
 - **Details:** Each mentee will present their research poster/presentation for 4 - 7 minutes.
+[ClosingCeremony](MentoshipClosingCeremony.jpg "ceremony")
 
 
 ## Research Project Structure
@@ -40,11 +41,9 @@ Mentors will assist mentees in developing their goals by providing knowledge, ad
 ## My Reasearch Topic
 My research topic is Integer Partitions, Insights from Discrete Mathematics.
 
-I would like to extend huge thanks to my mentor, Claire Zhao, University of Tronto, for her guidance and mentorship!
+I would like to extend huge thanks to my mentor, Claire Zhao, University of Tronto, for his guidance and mentorship!
 
 
 [View PDF](2024MathMentorshipByEthanLi.pdf)
 
-
-[ClosingCeremony](MentoshipClosingCeremony.jpg "ceremony")
 
