@@ -30,7 +30,7 @@ The goal of the Math Mentorship Program is to:
 
 ## Research Project Structure
 
-During the program, you and your mentor will:
+During the program, mentee and mentor will:
 - Work on and discuss various topics in mathematics.
 - Develop a research poster on a single problem or topic.
 - Engage in independent work and reading, returning to mentors with questions.
@@ -43,7 +43,7 @@ My research topic is Integer Partitions.
 I would like to extend huge thanks to my mentor, Claire Zhao, for her guidance and mentorship!
 
 
-[View PDF](https://github.com/ethan201not404/Math-Mentorship-2024/blob/main/2024MathMentorshipByEthanLi.pdf)
+[View PDF](2024MathMentorshipByEthanLi.pdf)
 
 
 [ClosingCeremony](MentoshipClosingCeremony.jpg "ceremony")
