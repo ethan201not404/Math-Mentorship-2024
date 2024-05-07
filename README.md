@@ -38,11 +38,12 @@ During the program, mentees and mentor will:
 
 Mentors will assist mentees in developing their goals by providing knowledge, advice, and resources. At the closing ceremony, mentees will present their research projects to the group.
 
-## My Reasearch Topic
+## My Research Topic
 My research topic is Integer Partitions, Insights from Discrete Mathematics.
 
-I would like to extend huge thanks to my mentor, Claire Zhao, University of Tronto, for his guidance and mentorship!
+I would like to extend huge thanks to my mentor, Claire Zhao, University of TOronto, for his guidance and mentorship!
 
+I used the [LaTex](latex/integer-partitions.tex) for generating the PDF file and the Python [Manium](manim) library (thought by Claire) for creating mathematical animations.
 
 [View PDF](2024MathMentorshipByEthanLi.pdf)
 
