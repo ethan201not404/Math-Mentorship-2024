@@ -26,7 +26,7 @@ The goal of the Math Mentorship Program is to:
 - **Time:** 1:00 PM – 4:00 PM
 - **Location:** University of Toronto (St. George Campus – 40 St. George Street)
 - **Details:** Each mentee will present their research poster/presentation for 4 - 7 minutes.
-[ClosingCeremony](MentoshipClosingCeremony.jpg "ceremony")
+- [Closing Ceremony Topics](MentoshipClosingCeremony.jpg "ceremony")
 
 
 ## Research Project Structure
