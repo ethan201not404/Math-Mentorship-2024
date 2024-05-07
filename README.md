@@ -41,7 +41,7 @@ Mentors will assist mentees in developing their goals by providing knowledge, ad
 ## My Research Topic
 My research topic is Integer Partitions, Insights from Discrete Mathematics.
 
-I would like to extend huge thanks to my mentor, Claire Zhao, University of TOronto, for his guidance and mentorship!
+I would like to extend huge thanks to my mentor, [Claire Zhao](contact.zhao@mail.utoronto.ca), University of TOronto, for his guidance and mentorship!
 
 I used the [LaTex](latex/integer-partitions.tex) for generating the PDF file and the Python [Manim](manim) library (taught by Claire) for creating mathematical animations.
 
