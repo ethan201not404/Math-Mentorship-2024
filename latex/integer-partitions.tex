@@ -3,7 +3,7 @@
 \usepackage[backend=biber]{biblatex}
 \addbibresource{sources.bib}
 \usepackage{tikz}
-\usepackage{amsmath}
+\usepackage{amsmath, amssymb, amsthm}
 \usepackage{verbatimbox}
 \usepackage{listings}
 \usepackage{xcolor}
@@ -11,9 +11,14 @@
 \usepackage{array}
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
 
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{question}
+\newtheorem{question}{Key Question}[section]
 
 \title{\vspace{-2.0cm}\textbf{Insights from Discrete Mathematics \\
-\LARGE Integer Partitions}}
+\LARGE from \emph{Integer Partitions} to \emph{Rooted Trees}}}
 \author{\textit{Ethan Li} \\ \small Grade 9, Central Toronto Academy \\ \\ \small Mentored by \normalsize \textit{Claire Zhao}}
 \date{May 11, 2024}
 
@@ -277,6 +282,7 @@ Another interesting theorem by Euler states that the number of odd-partitions is
     
 \noindent Hence, we have 3 of each and the number of odd parts is equal to the number of distinct parts.
 
+\newpage
 \section{Hardy-Ramanujan’s Asymptotic Expression}
 In 1918, Godfrey Hardy and Srinivasa Ramanujan developed an asymptotic formula for the number of partitions of a number \( n\), using the circle method along with modular functions to create an asymptotic solution:
 \[
@@ -306,8 +312,84 @@ This formula shows the rapid increase in the number of partitions as \( n \) bec
 \end{table}
 
 \newpage
-\section{Sources Cited}
-% \printbibliography[heading=bibintoc]
-\printbibliography
+% Cayley's generating function
+    \section{Rooted Trees}
+    \subsection{Introduction}
+    \begin{definition}
+                    A \emph{tree} is a graph consisting of vertices and edges 
+            but contains no closed path. A \emph{rooted tree} is a tree with one distinguished vertex called the \emph{root}. A non-root vertex is called a \emph{knot}.
+    \end{definition}
+
+\begin{question}
+    How many rooted trees with $n$ knots?
+\end{question}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.5]{images/rooted-tree.png}
+            \caption{A rooted tree}
+            \label{fig:enter-label}
+        \end{figure}
+
+    \subsection{From Trees to Cayley’s Generating Function}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.5]{images/rooted-tree.png}
+            \label{fig:rooted-tree}
+        \end{figure}
+        \noindent Let there be $T_n$ such trees, we look for a generating function with 
+        $T_n$ as coefficient.
+        \begin{equation*} % Changed from equation to align
+             T_1x + T_2 x^2 + T_3 x^3 +\cdots = x(1-x)^{-T_1}(1-x^2)^{-T_2}(1-x^3)^{-T_3}\cdots
+        \end{equation*}
+
+    \subsection{A Visual Proof}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.6]{images/tree1.png}
+            \label{fig:enter-label}
+        \end{figure}
+    Combinatorial insight: a rooted tree consists of \underline{the root} +  
+    \begin{enumerate}
+        \item some number of $1$-trees
+        \item some number of $2$-trees ...
+    \end{enumerate}
+    where the total number of knots add up to $n$.
+
+\subsection{Important Observation}
+        \begin{figure}[h]
+            \centering
+            \includegraphics{images/tree2.png}
+            \caption{A $3$-tree can be chosen $T_3$ different ways!}
+            \label{fig:enter-label}
+        \end{figure}
+
+    \subsection{Making choices by multiplication}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.5]{images/tree3.png}
+            \caption{Infinitely many rows: $T_k$ rows for $k$-trees}
+            \label{fig:enter-label}
+        \end{figure}
+        Insight: when you expand this product you are actually making choices
+
+\newpage
+
+    \subsection{Visual generating function}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.6]{images/tree5.png}
+            \caption{convert pictures into algebra}
+            \label{fig:enter-label}
+        \end{figure}
+
+    \begin{align*}
+        & T_1x + T_2 x^2 + T_3 x^3 +\cdots \\
+        =\,  & \underbrace{x}_{\text{this $x$ accounts for the root}}(1-x)^{-T_1}(1-x^2)^{-T_2}(1-x^3)^{-T_3}\cdots
+    \end{align*}
+
+
+    \newpage
+    \section{Sources Cited}
+    \printbibliography
 
 \end{document}

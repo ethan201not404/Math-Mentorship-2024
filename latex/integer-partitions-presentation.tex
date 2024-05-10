@@ -9,7 +9,8 @@
 
 
 % Edit
-\title{Insights from Discrete Mathematics \\ from Integer Partitions to Rooted Trees}
+\title{Insights from Discrete Mathematics}
+\subtitle{from \emph{Integer Partitions} to \emph{Rooted Trees}}
 \author{Ethan Li}
 \date{May 11, 2024}  
 
@@ -32,7 +33,7 @@
     % this is a slide
     \begin{frame}{Introduction}{Integer Partitions}
         \begin{definition}
-            A partition of a positive integer $n$ is written as a sum of positive integers. Different orders of the same partitions do not count as separate partitions
+            A partition of a positive integer $n$ is a way of expressing $n$ as a sum of positive integers. Different orders of the same partitions do not count as separate partitions.
         \end{definition}
 
         \begin{example}
@@ -51,7 +52,7 @@
         \end{example}
     \end{frame}
 
-    \section{Representations of the Partitions}
+    \section{Visualization of the Partitions}
     % this is another slide
     \begin{frame}{Representations of the Partitions}{Ferrers diagram}
         \centering
@@ -102,7 +103,7 @@
     \end{frame}
     
     % this is another slide
-    \begin{frame}{Representations of the Partitions}{Young Diagram}
+    \begin{frame}{Visualization of the Partitions}{Young Diagram}
         \href{https://youtu.be/8qc71j8yhG0}{\small\ Click here for animation demo using Python Manim} \\
         \begin{figure}\
         \centering
@@ -151,11 +152,11 @@
     \end{frame}
 
 
-    \section{Euler’s Generating Functions}
+    \section{Euler’s Generating Function}
     % this is a slide
     \begin{frame}{Euler’s Generating Functions}
         \begin{equation}
-            \sum_{n=0}^{\infty} p(n) x^n = \frac{1}{\prod_{p=1}^{\infty} (1-x^p)}, \quad \text{where } |x| < 1
+            \sum_{n=0}^{\infty} p(n) x^n = \prod_{k=1}^{\infty} \frac{1}{1-x^k}, \quad \text{where } |x| < 1
         \end{equation}
 
         \begin{example}
