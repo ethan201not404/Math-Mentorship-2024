@@ -9,7 +9,7 @@
 
 
 % Edit
-\title{Insights from Discrete Mathematics \\ Integer Partitions}
+\title{Insights from Discrete Mathematics \\ from Integer Partitions to Rooted Trees}
 \author{Ethan Li}
 \date{May 11, 2024}  
 
@@ -30,7 +30,7 @@
 
     \section{Introduction}
     % this is a slide
-    \begin{frame}{Introduction}
+    \begin{frame}{Introduction}{Integer Partitions}
         \begin{definition}
             A partition of a positive integer $n$ is written as a sum of positive integers. Different orders of the same partitions do not count as separate partitions
         \end{definition}
@@ -204,8 +204,55 @@
         \begin{equation}
             p(n) \approx \frac{1}{4n\sqrt{3}} e^{\pi \sqrt{\frac{2n}{3}}} \quad \text{as} \quad n \to \infty
         \end{equation} \\
-
         \centering \href{https://youtu.be/UYjqhT5xnsY}{Click here for animations demo using Python Manim}\
+    \end{frame}
+
+    % Cayley's generating function
+    \section{Rooted Trees}
+    % this is a slide
+    \begin{frame}{Rooted trees}{Introduction}
+        \begin{definition}
+            A \emph{tree} is a graph consisting of vertices and edges 
+            but contains no closed path. A \emph{rooted tree} is a tree with one distinguished vertex called the \emph{root}. A non-root vertex is called a \emph{knot}.
+        \end{definition}
+        \begin{block}{Question}
+            How many rooted trees with $n$ knots?
+        \end{block}
+        \begin{figure}
+            \centering
+            \includegraphics[scale=0.5]{images/rooted-tree.png}
+            \caption{A rooted tree}
+            \label{fig:enter-label}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}{Rooted Trees}{From Trees to Cayley’s Generating Function}
+    % this is a slide
+        \begin{figure}
+            \centering
+            \includegraphics[scale=0.5]{images/rooted-tree.png}
+            \label{fig:rooted-tree}
+        \end{figure}
+        Let there be $T_n$ such trees, we look for a generating function with 
+        $T_n$ as coefficient.
+        \begin{align} % Changed from equation to align
+            & T_1x + T_2 x^2 + T_3 x^3 +\cdots \\
+            =\,  & x(1-x)^{-T_1}(1-x^2)^{-T_2}(1-x^3)^{-T_3}\cdots
+        \end{align}
+    \end{frame}
+    
+    \begin{frame}{Rooted Trees}{A Visual Proof}
+    % this is a slide
+        \begin{figure}
+            \centering
+            \includegraphics[scale=0.5]{images/tree5.png}
+            \caption{Convert trees into algebra}
+            \label{fig:enter-label}
+        \end{figure}
+        \begin{align*}
+            & T_1x + T_2 x^2 + T_3 x^3 +\cdots \\
+            =\,  & \underbrace{x}_{\text{this $x$ accounts for the root}}(1-x)^{-T_1}(1-x^2)^{-T_2}(1-x^3)^{-T_3}\cdots
+        \end{align*}
     \end{frame}
 
 \end{document}
