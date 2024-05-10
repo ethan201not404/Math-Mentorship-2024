@@ -173,6 +173,17 @@
             \end{equation}
         \end{example}
     \end{frame}
+    \section{Hardy-Ramanujan’s Asymptotic Expression}
+    % this is a slide
+    \begin{frame}{Hardy-Ramanujan’s Asymptotic Expression}
+        \begin{definition}
+            Godfrey Hardy and Srinivasa Ramanujan proved an asymptotic formula for partitioning a number \(n\) using the circle method and modular functions
+        \end{definition}
+        \begin{equation}
+            p(n) \approx \frac{1}{4n\sqrt{3}} e^{\pi \sqrt{\frac{2n}{3}}} \quad \text{as} \quad n \to \infty
+        \end{equation} \\
+        \centering \href{https://youtu.be/UYjqhT5xnsY}{Click here for animations demo using Python Manim}\
+    \end{frame}
 
     \section{The Coins Change Problem}
     % this is a slide
@@ -185,28 +196,28 @@
     \end{frame}
 
     % this is a slide
-    \begin{frame}{The Coins Change Problem}{Using the Coins Change problem to derive the Euler’s Generating Function}
+    \begin{frame}{The Coins Change Problem}{Using the Coins Change problem to derive the Generating Function}
         \begin{definition}
             Interpret the coins change problem in mathematical form as follows:
             \begin{center}{Let \( P_n \) denote the number of ways of paying \(n\) cents \\ with cents, nickels, dimes, quarters, and half dollars.\\ Given \(P_4=1\), \(P_6=2\), and \(P_{10}=4\), what is \(P_{100}\) ?}
             \end{center}
         \end{definition}
         \begin{proof}
-            Please visit \href {https://github.com/ethan201not404/Math-Mentorship-2024/blob/main/2024MathMentorshipByEthanLi.pdf}{the section $2.2$ of my research paper available on the GitHub (link) for complete derivation for Euler's Generating Function based on the coins change problem.}
+            Please visit \href {https://github.com/ethan201not404/Math-Mentorship-2024/blob/main/2024MathMentorshipByEthanLi.pdf}{the section $4$ of my research paper available on the GitHub (link) for complete derivation for the generating function based on the coins change problem.}
         \end{proof}
     \end{frame}
 
-    \section{Hardy-Ramanujan’s Asymptotic Expression}
-    % this is a slide
-    \begin{frame}{Hardy-Ramanujan’s Asymptotic Expression}
-        \begin{definition}
-            Godfrey Hardy and Srinivasa Ramanujan create an asymptotic formula for partitioning a number \(n\) using the circle method and modular functions
-        \end{definition}
-        \begin{equation}
-            p(n) \approx \frac{1}{4n\sqrt{3}} e^{\pi \sqrt{\frac{2n}{3}}} \quad \text{as} \quad n \to \infty
-        \end{equation} \\
-        \centering \href{https://youtu.be/UYjqhT5xnsY}{Click here for animations demo using Python Manim}\
+    \begin{frame}{Generating Function}{for Coin Change Problem}
+        \begin{block}{Statement of Result}
+        If $P_n$ is the number of ways to change $n$ dollars with 
+        cents, nickels, dimes, quareters, and half dollars, then 
+        \begin{equation*}
+            1+P_1x + P_2x^2 + \cdots = \frac{1}{1-x}\cdot\frac{1}{1-x^5}\cdot\frac{1}{1-x^{10}}\cdot\frac{1}{1-x^{25}}\cdot\frac{1}{1-x^{50}}
+        \end{equation*}
+            
+        \end{block}
     \end{frame}
+
 
     % Cayley's generating function
     \section{Rooted Trees}
@@ -254,6 +265,10 @@
             & T_1x + T_2 x^2 + T_3 x^3 +\cdots \\
             =\,  & \underbrace{x}_{\text{this $x$ accounts for the root}}(1-x)^{-T_1}(1-x^2)^{-T_2}(1-x^3)^{-T_3}\cdots
         \end{align*}
+        \begin{proof}
+            Please visit \href {https://github.com/ethan201not404/Math-Mentorship-2024/blob/main/2024MathMentorshipByEthanLi.pdf}{the section $5$ of my research paper available on the GitHub (link) for details.}
+        \end{proof}
+        
     \end{frame}
 
 \end{document}

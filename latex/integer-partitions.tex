@@ -142,10 +142,7 @@ Alfred Young created the Young Diagram, which is similar to the Ferres diagram b
 
 
 \newpage
-\section{The Coins Change Problem}
-
-\noindent \href{https://youtu.be/PmR1eRswj3A}{Animations demo for Coin Change Combination Problem using Python Manim.}\cite{manim}
-
+\section{Euler's Generating Function}
 
 \subsection{Intro to Euler's Generating Function}
 Euler discovered several theorems related to integer partitioning, but his generating function is particularly notable. It is defined as:
@@ -164,96 +161,6 @@ Expanding above to get \(1 + x + 2x^2 + 3x^3 + 5x^4 + 7x^5 + 11x^6 + 15x^7 + 22x
 \noindent Hence, \(P(7)=15\)
 
 
-\subsection{The Coins Change Problem}
-\begin{center}
-    Question:
-    “\textit{In how many ways can you change one dollar?}” \cite{gpolya1956}
-\end{center}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=8cm]{images/coins-change.jpg}
-    \caption{How many ways can you change one dollar?}
-\end{figure}
-
-\newpage
-\noindent Interpret the coins change problem in mathematical form as follows: \\
-
-\noindent 
-\begin{center}\textbf{\noindent Let \( P_n \) denote the number of ways of paying \( n \) cents \\ with cents, nickels, dimes, quarters, and half dollars.\\ Given \(P_4=1\), \(P_6=2\), and \(P_{10}=4\), what is \(P_{100}\) ?}
-\end{center}
-
-\noindent Now let's explore the various possibilities here. For instance, we could use denominations of 1 cent, 2 cents, 5 cents, and so on, as demonstrated in the diagram below: \\
-
-\noindent In the first diagram, if we interpret each line as the sum of pictures in it, and then consider the product of these five infinite sums, we get the second diagram. Once this is expanded, it gives us the number of different ways of making payments. \\
-
-\noindent For instance, if we take the term with \(2\) coins in line two, it represents paying two nickels. \\
-
-\noindent In order to make this work, we substitute each pictorial variable as a power of a new variable x. The exponent of x would be the joint value of the coins represented by the  picture. Then we get:
-
-\[
-P_0 + P_1 x + P_2 x^2 + \dots + P_n x^n + \dots
-\]
-
-\noindent In above series, the coefficient of \(x^n\) counts the number of different ways of paying the amounts of n cents. This is called the enumerating series. We can substitute the second figure into a \textbf{geometric series} as follows:
-
-\[
-1 + x + x^2 + x^3 + \dots = \frac{1}{1-x}
-\]
-
-\noindent This changes each of the first five lines into a geometric series and equation in the second figure. So we have:
-
-\[
-(1 - x)^{-1}(1 - x^5)^{-1}(1 - x^{10})^{-1}(1 - x^{25})^{-1}(1 - x^{50})^{-1} = P_0 + P_1 x + P_2 x^2 + \dots + P_n x^n
-\]
-
-\noindent This sum is usually termed as the generating function. This function expanded in powers of \(x\) generates the numbers \(P_0, P_1, \dots, P_n\), our starting point. \\
-
-\noindent To get our generating function, we put every single power of \(x\) instead of just the coin values. This gives us all the partitions of an integer. \\
-
-\noindent Now, we have reduced this combinatorial problem to a different kind of problem! We must expand it in powers of \(x\). Let's assume we have already obtained the expansion of the product of the first two factors:
-\[
-(1 - x)^{-1}(1 - x^5)^{-1} = a_0 + a_1 x + a_2 x^2 + \dots
-\] \\
-
-\noindent  We can use this to find the expansion for 3 factors
-\[
-(1 - x)^{-1}(1 - x^5)^{-1}(1 - x^{10})^{-1} = b_0 + b_1 x + b_2 x^2 + \dots
-\]
-This means:
-\[
-a_0 + a_1 x + a_2 x^2 + \dots = (b_0 + b_1 x + b_2 x^2 + \dots)(1 - x^{10})
-\]
-If we compare the coefficients of $x^n$, we find that
-\[
-b_n = a_n + b_{n-10}
-\]
-With this, we can conveniently compute the coefficients of $b_n$ if the coefficients of $a_n$ are already known. \\
-
-\noindent Let's add a table that computes $P_{50}$. The table below represents the coefficients for the series expansions of $(1-x)^{-1}$, $(1-x^5)^{-1}$, $(1-x^{10})^{-1}$, $(1-x^{25})^{-1}$, and $(1-x^{50})^{-1}$: 
-
-\[
-\begin{array}{|c|*{11}{c|}}
-\hline
-n = & 0 & 5 & 10 & 15 & 20 & 25 & 30 & 35 & 40 & 45 & 50 \\
-\hline
-(1 - x)^{-1} & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
-\hline
-(1 - x^5)^{-1} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 \\
-\hline
-(1 - x^{10})^{-1} & 1 & 2 & 4 & 6 & 9 & 12 & 16 & 20 & 25 & 30 & 36 \\
-\hline
-(1 - x^{25})^{-1} & 1 & 2 & 4 & 6 & 9 & 13 &  &  &  &  & 49 \\
-\hline
-(1 - x^{50})^{-1} & 1 &  &  &  &  &  &  &  &  &  & 50 \\
-\hline
-\end{array}
-\]
-
-\noindent  This table above yields $P_{50} = 50$, which means one can pay 50 cents in 50 different ways. Although this table only computes up to $P_{50}$, we can continue this computation and verify that $P_{100} = 292$.
-
-
-\newpage
 \subsection{Euler's Odd-Partitions \& Distinct-Partitions Theorem}
 Another interesting theorem by Euler states that the number of odd-partitions is equal to the number of distinct parts:\\
 
@@ -294,8 +201,7 @@ This formula shows the rapid increase in the number of partitions as \( n \) bec
 
 \noindent \href{https://youtu.be/UYjqhT5xnsY}{Animations demo for Hardy-Ramanujan’s Asymptotic Expression using Python Manim.}\cite{manim}
 
-
-\begin{table}[h!] % The 'h!' places the table here, approximately
+\begin{table}[h!] 
     \centering % Centers the table
     \begin{tabular}{|c|c|c|c|}
         \hline
@@ -310,6 +216,101 @@ This formula shows the rapid increase in the number of partitions as \( n \) bec
     \end{tabular}
     \caption{The outcomes of the Hardy-Ramanujan’s Asymptotic Expression} 
 \end{table}
+
+
+\newpage
+\section{The Coins Change Problem}
+    \noindent \href{https://youtu.be/PmR1eRswj3A}{Animations demo for Coin Change Combination Problem using Python Manim.}\cite{manim}
+
+    \subsection{The Coins Change Problem}
+    \begin{center}
+        Question:
+        “\textit{In how many ways can you change one dollar?}” \cite{gpolya1956}
+    \end{center}
+    
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=8cm]{images/coins-change.jpg}
+        \caption{How many ways can you change one dollar?}
+    \end{figure}
+    
+    \newpage
+    \noindent Interpret the coins change problem in mathematical form as follows: \\
+    
+    \noindent 
+    \begin{center}\textbf{\noindent Let \( P_n \) denote the number of ways of paying \( n \) cents \\ with cents, nickels, dimes, quarters, and half dollars.\\ Given \(P_4=1\), \(P_6=2\), and \(P_{10}=4\), what is \(P_{100}\) ?}
+    \end{center}
+    
+    \noindent Now let's explore the various possibilities here. For instance, we could use denominations of 1 cent, 2 cents, 5 cents, and so on, as demonstrated in the diagram below: \\
+    
+    \noindent In the first diagram, if we interpret each line as the sum of pictures in it, and then consider the product of these five infinite sums, we get the second diagram. Once this is expanded, it gives us the number of different ways of making payments. \\
+    
+    \noindent For instance, if we take the term with \(2\) coins in line two, it represents paying two nickels. \\
+    
+    \noindent In order to make this work, we substitute each pictorial variable as a power of a new variable x. The exponent of x would be the joint value of the coins represented by the  picture. Then we get:
+    
+    \[
+    P_0 + P_1 x + P_2 x^2 + \dots + P_n x^n + \dots
+    \]
+    
+    \noindent In above series, the coefficient of \(x^n\) counts the number of different ways of paying the amounts of n cents. This is called the enumerating series. We can substitute the second figure into a \textbf{geometric series} as follows:
+    
+    \[
+    1 + x + x^2 + x^3 + \dots = \frac{1}{1-x}
+    \]
+    
+    \noindent This changes each of the first five lines into a geometric series and equation in the second figure. So we have:
+    
+    \[
+    (1 - x)^{-1}(1 - x^5)^{-1}(1 - x^{10})^{-1}(1 - x^{25})^{-1}(1 - x^{50})^{-1} = P_0 + P_1 x + P_2 x^2 + \dots + P_n x^n
+    \]
+    
+    \noindent This sum is usually termed as the generating function. This function expanded in powers of \(x\) generates the numbers \(P_0, P_1, \dots, P_n\), our starting point. \\
+    
+    \noindent To get our generating function, we put every single power of \(x\) instead of just the coin values. This gives us all the partitions of an integer. \\
+    
+    \noindent Now, we have reduced this combinatorial problem to a different kind of problem! We must expand it in powers of \(x\). Let's assume we have already obtained the expansion of the product of the first two factors:
+    \[
+    (1 - x)^{-1}(1 - x^5)^{-1} = a_0 + a_1 x + a_2 x^2 + \dots
+    \] \\
+    
+    \noindent  We can use this to find the expansion for 3 factors
+    \[
+    (1 - x)^{-1}(1 - x^5)^{-1}(1 - x^{10})^{-1} = b_0 + b_1 x + b_2 x^2 + \dots
+    \]
+    This means:
+    \[
+    a_0 + a_1 x + a_2 x^2 + \dots = (b_0 + b_1 x + b_2 x^2 + \dots)(1 - x^{10})
+    \]
+    If we compare the coefficients of $x^n$, we find that
+    \[
+    b_n = a_n + b_{n-10}
+    \]
+    With this, we can conveniently compute the coefficients of $b_n$ if the coefficients of $a_n$ are already known. \\
+    
+    \noindent Let's add a table that computes $P_{50}$. The table below represents the coefficients for the series expansions of $(1-x)^{-1}$, $(1-x^5)^{-1}$, $(1-x^{10})^{-1}$, $(1-x^{25})^{-1}$, and $(1-x^{50})^{-1}$: 
+    
+    \[
+    \begin{array}{|c|*{11}{c|}}
+    \hline
+    n = & 0 & 5 & 10 & 15 & 20 & 25 & 30 & 35 & 40 & 45 & 50 \\
+    \hline
+    (1 - x)^{-1} & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+    \hline
+    (1 - x^5)^{-1} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 \\
+    \hline
+    (1 - x^{10})^{-1} & 1 & 2 & 4 & 6 & 9 & 12 & 16 & 20 & 25 & 30 & 36 \\
+    \hline
+    (1 - x^{25})^{-1} & 1 & 2 & 4 & 6 & 9 & 13 &  &  &  &  & 49 \\
+    \hline
+    (1 - x^{50})^{-1} & 1 &  &  &  &  &  &  &  &  &  & 50 \\
+    \hline
+    \end{array}
+    \]
+    
+    \noindent  This table above yields $P_{50} = 50$, which means one can pay 50 cents in 50 different ways. Although this table only computes up to $P_{50}$, we can continue this computation and verify that $P_{100} = 292$.
+
+
 
 \newpage
 % Cayley's generating function
@@ -333,7 +334,7 @@ This formula shows the rapid increase in the number of partitions as \( n \) bec
     \subsection{From Trees to Cayley’s Generating Function}
         \begin{figure}[h]
             \centering
-            \includegraphics[scale=0.5]{images/rooted-tree.png}
+            \includegraphics[scale=0.3]{images/rooted-tree.png}
             \label{fig:rooted-tree}
         \end{figure}
         \noindent Let there be $T_n$ such trees, we look for a generating function with 
@@ -390,6 +391,7 @@ This formula shows the rapid increase in the number of partitions as \( n \) bec
 
     \newpage
     \section{Sources Cited}
+    % \printbibliography[heading=bibintoc]
     \printbibliography
 
 \end{document}
