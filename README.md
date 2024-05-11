@@ -50,8 +50,6 @@ I used the [LaTex](latex/integer-partitions.tex) for generating the PDF file and
 
 [View the presentation slides for the closing ceremony](2024MathMentorshipPresentationSlidesByEthanLi.pdf)
 
-![Alt text](https://github.com/username/repository/raw/branch/path/to/image.png)
-
 
 ## Barcode
 ![Scan Me](https://github.com/ethan201not404/Math-Mentorship-2024/blob/main/barcode.jpeg =50%x)
