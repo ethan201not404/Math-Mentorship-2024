@@ -26,7 +26,7 @@ The goal of the Math Mentorship Program is to:
 - **Time:** 1:00 PM – 4:00 PM
 - **Location:** University of Toronto (St. George Campus – 40 St. George Street)
 - **Details:** Each mentee will present their research poster/presentation for 4 - 7 minutes.
-- [Closing Ceremony Topics](MentoshipClosingCeremony.jpg "ceremony")
+![Closing Ceremony Topics](MentoshipClosingCeremony.jpg "ceremony")
 
 
 ## Research Project Structure
@@ -52,4 +52,4 @@ I used the [LaTex](latex/integer-partitions.tex) for generating the PDF file and
 
 
 ## Barcode
-![Scan Me](https://github.com/ethan201not404/Math-Mentorship-2024/blob/main/barcode.jpeg =50%x)
+![Scan Me](barcode.jpeg)
