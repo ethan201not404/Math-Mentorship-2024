@@ -38,6 +38,7 @@ During the program, mentees and mentor will:
 
 Mentors will assist mentees in developing their goals by providing knowledge, advice, and resources. At the closing ceremony, mentees will present their research projects to the group.
 
+
 ## My Research Topic
 My research topic is Integer Partitions, Insights from Discrete Mathematics.
 
@@ -47,5 +48,10 @@ I used the [LaTex](latex/integer-partitions.tex) for generating the PDF file and
 
 [View the full research aper in PDF](2024MathMentorshipByEthanLi.pdf)
 
-
 [View the presentation slides for the closing ceremony](2024MathMentorshipPresentationSlidesByEthanLi.pdf)
+
+![Alt text](https://github.com/username/repository/raw/branch/path/to/image.png)
+
+
+## Barcode
+![Scan Me](https://github.com/ethan201not404/Math-Mentorship-2024/blob/main/barcode.jpeg =50%x)
