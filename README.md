@@ -46,7 +46,7 @@ I would like to extend huge thanks to my mentor, [Claire Zhao](contact.zhao@mail
 
 I used the [LaTex](latex/integer-partitions.tex) for generating the PDF file and the Python [Manim](manim) library (taught by Claire) for creating mathematical animations.
 
-[View the full research aper in PDF](2024MathMentorshipByEthanLi.pdf)
+[View the full research paper in PDF](2024MathMentorshipByEthanLi.pdf)
 
 [View the presentation slides for the closing ceremony](2024MathMentorshipPresentationSlidesByEthanLi.pdf)
 
