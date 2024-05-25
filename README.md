@@ -40,7 +40,7 @@ Mentors will assist mentees in developing their goals by providing knowledge, ad
 
 
 ## My Research Topic
-My research topic is **Integer Partitions, Insights from Discrete Mathematics**.
+My research topic is **From Integer Partitions to Rooted Trees, Insights from Discrete Mathematics**.
 
 I would like to extend huge thanks to my mentor, [Claire Zhao](contact.zhao@mail.utoronto.ca), University of Toronto, for his guidance and mentorship!
 
